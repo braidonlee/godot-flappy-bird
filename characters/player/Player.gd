@@ -1,4 +1,5 @@
 extends RigidBody2D
+class_name Player
 
 export var FLAP_FORCE = -200
 
@@ -8,7 +9,7 @@ onready var animator = $AnimationPlayer
 
 var started = false
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if Input.is_action_just_pressed("flap"):
 		if !started:
 			start()
