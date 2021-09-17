@@ -11,9 +11,8 @@ func _physics_process(delta):
 
 
 func _on_Wall_body_entered(body):
-	if body is Player:
-		if body.has_method("die"):
-			body.die()
+	if body is Player && body.has_method("die"):
+		body.die()
 
 
 func _on_ScoreArea_body_exited(body):
